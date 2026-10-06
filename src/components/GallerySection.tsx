@@ -23,11 +23,8 @@ export const GallerySection: React.FC = () => {
     imageUrl: string;
   } | null>(null);
 
-  // Owner / Editor mode: default to false (Customer View) now that all 6 images are uploaded and finalized
-  const [isEditorMode, setIsEditorMode] = useState<boolean>(() => {
-    const saved = localStorage.getItem('dhivesri_gallery_editor_mode');
-    return saved !== null ? saved === 'true' : false;
-  });
+  // Finalized Customer View (editor mode disabled)
+  const isEditorMode = false;
 
   // Custom uploaded images mapped by card id
   const [customImages, setCustomImages] = useState<Record<number, string>>(() => {
@@ -41,7 +38,7 @@ export const GallerySection: React.FC = () => {
     return loaded;
   });
 
-  // Re-sync from localStorage on mount and window focus to guarantee updates are reflected
+  // Re-sync from localStorage on mount and window focus to guarantee updates are reflected on server and mobile
   useEffect(() => {
     const syncCustomImages = () => {
       const loaded: Record<number, string> = {};
@@ -49,6 +46,15 @@ export const GallerySection: React.FC = () => {
         const saved = localStorage.getItem(`dhivesri_gallery_custom_${i}`);
         if (saved) {
           loaded[i] = saved;
+          // Sync to server so mobile and shared link get these images
+          if (saved.startsWith('data:')) {
+            const filename = serverFilenameMap[i] || `gallery-${i}.png`;
+            fetch('/api/upload-asset', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ filename, base64: saved }),
+            }).catch(() => null);
+          }
         }
       }
       if (Object.keys(loaded).length > 0) {
@@ -84,11 +90,6 @@ export const GallerySection: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleToggleEditorMode = (enabled: boolean) => {
-    setIsEditorMode(enabled);
-    localStorage.setItem('dhivesri_gallery_editor_mode', enabled.toString());
-  };
-
   const galleryItems: GalleryItem[] = [
     {
       id: 1,
@@ -97,7 +98,7 @@ export const GallerySection: React.FC = () => {
       title: 'Home Facial Treatment Setup',
       caption: 'Personalized facial care and hygienic home service setup for ladies in Salem.',
       badge: 'Salem Home Service',
-      defaultImageUrl: '/Home Facial Treatment Setup.png',
+      defaultImageUrl: '/gallery-service-1.png?v=live-20261006',
       isAuthenticPhoto: true,
     },
     {
@@ -107,7 +108,7 @@ export const GallerySection: React.FC = () => {
       title: 'Ladies Hair Cut & Styling',
       caption: 'Neat straight cut, U-cut haircuts performed with professional care at your home.',
       badge: 'Hair Cut & Styling',
-      defaultImageUrl: '/Ladies Hair Cut & Styling.png',
+      defaultImageUrl: '/gallery-service-2.png?v=live-20261006',
     },
     {
       id: 3,
@@ -116,7 +117,7 @@ export const GallerySection: React.FC = () => {
       title: 'Facial Skincare Treatment',
       caption: 'Fruit, Gold, and Diamond facial skincare preparations with hygienic bowls and gentle care.',
       badge: 'Facial Care',
-      defaultImageUrl: '/Facial Skincare Treatment.png',
+      defaultImageUrl: '/gallery-service-3.png?v=live-20261006',
     },
     {
       id: 4,
@@ -125,7 +126,7 @@ export const GallerySection: React.FC = () => {
       title: 'Eyebrow Threading & Care',
       caption: 'Neat eyebrow threading and shaping done with professional hygiene at your home.',
       badge: 'Eyebrow Care',
-      defaultImageUrl: '/Eyebrow Threading & Care.png',
+      defaultImageUrl: '/gallery-service-4.png?v=live-20261006',
     },
     {
       id: 5,
@@ -134,7 +135,7 @@ export const GallerySection: React.FC = () => {
       title: 'Waxing Service',
       caption: 'Arm, leg, and full-body waxing services with clean and hygienic setup at your home.',
       badge: 'Waxing Care',
-      defaultImageUrl: '/Waxing Service.png',
+      defaultImageUrl: '/gallery-service-5.png?v=live-20261006',
     },
     {
       id: 6,
@@ -143,18 +144,18 @@ export const GallerySection: React.FC = () => {
       title: 'Pedicure & Foot Care',
       caption: 'Relaxing pedicure and foot care services for soft and healthy feet at your home.',
       badge: 'Hand & Foot Care',
-      defaultImageUrl: '/Pedicure & Foot Care.png',
+      defaultImageUrl: '/gallery-service-6.png?v=live-20261006',
     },
   ];
 
   // Server filename mapping for persistence
   const serverFilenameMap: Record<number, string> = {
-    1: 'Home Facial Treatment Setup.png',
-    2: 'Ladies Hair Cut & Styling.png',
-    3: 'Facial Skincare Treatment.png',
-    4: 'Eyebrow Threading & Care.png',
-    5: 'Waxing Service.png',
-    6: 'Pedicure & Foot Care.png',
+    1: 'gallery-service-1.png',
+    2: 'gallery-service-2.png',
+    3: 'gallery-service-3.png',
+    4: 'gallery-service-4.png',
+    5: 'gallery-service-5.png',
+    6: 'gallery-service-6.png',
   };
 
   // Handle local file selection for a specific card
@@ -329,74 +330,6 @@ export const GallerySection: React.FC = () => {
             Experience our ladies-only doorstep beauty care across Salem District. Browse glimpses of our clean setup, personal attention, and home-service comfort.
           </p>
 
-          {/* Owner / Editor Mode Toggle Toolbar */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-2">
-            <div className="inline-flex items-center gap-1.5 p-1 rounded-2xl bg-stone-100 border border-stone-200 text-xs shadow-2xs">
-              <div className="flex items-center gap-1.5 px-2.5 py-1 text-stone-600 font-medium">
-                <SlidersHorizontal className="w-3.5 h-3.5 text-rose-800" />
-                <span className="font-semibold text-stone-800">Owner View:</span>
-              </div>
-              <button
-                type="button"
-                onClick={() => handleToggleEditorMode(true)}
-                className={`flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold transition-all ${
-                  isEditorMode
-                    ? 'bg-rose-900 text-white shadow-xs'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
-                title="Enable Upload and Change Image buttons on each card"
-              >
-                <Upload className="w-3 h-3" />
-                <span>Edit Images Mode</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleToggleEditorMode(false)}
-                className={`flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold transition-all ${
-                  !isEditorMode
-                    ? 'bg-stone-900 text-white shadow-xs'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
-                title="Preview the Gallery exactly as customers see it without upload buttons"
-              >
-                <Eye className="w-3 h-3" />
-                <span>Customer View</span>
-              </button>
-            </div>
-
-            {/* Hidden batch file input */}
-            <input
-              type="file"
-              ref={batchInputRef}
-              onChange={handleBatchUpload}
-              multiple
-              accept="image/jpeg,image/png,image/webp,image/jpg"
-              className="hidden"
-            />
-
-            {/* Match & Apply 5 Images Button */}
-            <button
-              type="button"
-              onClick={() => batchInputRef.current?.click()}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-2xl font-bold bg-[#5A1224] text-white hover:bg-[#430B19] shadow-md transition-all text-xs cursor-pointer border border-[#D4AF37]/40 active:scale-95"
-              title="Select your 5 service images at once - automatically matches by filename to each gallery card!"
-            >
-              <Upload className="w-3.5 h-3.5 text-[#F4D3DA]" />
-              <span>Match & Apply 5 Images (Bulk Match)</span>
-            </button>
-
-            {/* Reset All Images Button */}
-            <button
-              type="button"
-              onClick={handleResetAllImages}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-2xl font-bold bg-white text-stone-700 hover:bg-rose-50 hover:text-rose-900 shadow-2xs transition-all text-xs cursor-pointer border border-stone-200 active:scale-95"
-              title="Reset all gallery images"
-            >
-              <RotateCcw className="w-3.5 h-3.5 text-stone-500" />
-              <span>Reset All (மீட்டமை)</span>
-            </button>
-          </div>
-
           {/* Notification Toast */}
           {notification && (
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold animate-in fade-in slide-in-from-top-1 duration-200">
@@ -478,17 +411,7 @@ export const GallerySection: React.FC = () => {
                       const target = e.currentTarget;
                       if (!target.dataset.triedFallback) {
                         target.dataset.triedFallback = 'true';
-                        const fallbacks: Record<number, string> = {
-                          1: '/hero-home-service.jpg',
-                          2: '/gallery-haircut.jpg',
-                          3: '/gallery-facial-care.jpg',
-                          4: '/gallery-eyebrow.jpg',
-                          5: '/gallery-waxing.svg',
-                          6: '/gallery-pedicure.jpg',
-                        };
-                        if (fallbacks[item.id]) {
-                          target.src = fallbacks[item.id];
-                        }
+                        target.src = `/gallery-service-${item.id}.png`;
                       }
                     }}
                   />
@@ -498,13 +421,6 @@ export const GallerySection: React.FC = () => {
                     <div className="w-11 h-11 rounded-full bg-white/95 text-rose-900 shadow-md flex items-center justify-center transform scale-90 group-hover:scale-100 transition-transform duration-200">
                       <ZoomIn className="w-5 h-5" />
                     </div>
-                  </div>
-
-                  {/* Category Pill Tag */}
-                  <div className="absolute top-3 left-3 z-10">
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-white/95 text-rose-900 shadow-2xs border border-rose-100/60">
-                      {item.categoryLabel}
-                    </span>
                   </div>
 
                   {/* Custom Uploaded Badge indicator (visible in edit mode) */}

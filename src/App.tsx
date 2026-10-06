@@ -7,14 +7,10 @@ import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
-import { ServicesSection } from './components/ServicesSection';
 import { PriceListSection } from './components/PriceListSection';
-import { WhyChooseUs } from './components/WhyChooseUs';
 import { ServiceAreasSection } from './components/ServiceAreasSection';
-import { ReviewsSection } from './components/ReviewsSection';
 import { GallerySection } from './components/GallerySection';
 import { BookingSection } from './components/BookingSection';
-import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { StickyContactBar } from './components/StickyContactBar';
 import { ServiceCategory, ServiceItem } from './types';
@@ -42,15 +38,6 @@ export default function App() {
     setSelectedServices([]);
   };
 
-  const handleCategoryFromServices = (category: ServiceCategory) => {
-    setSelectedCategory(category);
-    // Smooth scroll to price list
-    const el = document.getElementById('price-list');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-[#FFFDFB] text-stone-800 font-sans selection:bg-rose-100 selection:text-rose-900">
       {/* Navigation Header */}
@@ -63,9 +50,6 @@ export default function App() {
         {/* About Section */}
         <AboutSection />
 
-        {/* Services Overview */}
-        <ServicesSection onSelectCategory={handleCategoryFromServices} />
-
         {/* Official Price List with Interactive Calculator */}
         <PriceListSection
           selectedCategory={selectedCategory}
@@ -75,14 +59,8 @@ export default function App() {
           onClearServices={handleClearServices}
         />
 
-        {/* Why Choose Us */}
-        <WhyChooseUs />
-
         {/* Salem District Service Areas */}
         <ServiceAreasSection />
-
-        {/* Customer Rating & Review Design */}
-        <ReviewsSection />
 
         {/* Gallery / Care Showcase */}
         <GallerySection />
@@ -92,9 +70,6 @@ export default function App() {
           selectedServices={selectedServices}
           onToggleService={handleToggleService}
         />
-
-        {/* FAQ Section */}
-        <FaqSection />
       </main>
 
       {/* Footer */}

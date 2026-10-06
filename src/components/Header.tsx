@@ -32,11 +32,8 @@ export const Header: React.FC = () => {
 
   const navLinks = [
     { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Price List', href: '#price-list' },
-    { name: 'Why Choose Us', href: '#why-us' },
+    { name: 'Services & Prices', href: '#price-list' },
     { name: 'Salem Areas', href: '#service-areas' },
-    { name: 'Reviews', href: '#reviews' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Book Service', href: '#booking' },
   ];

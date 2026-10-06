@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Search, CheckCircle2, MessageCircle, Phone } from 'lucide-react';
+import { MapPin, Search, CheckCircle2, MessageCircle, Phone, ExternalLink, Navigation } from 'lucide-react';
 import { SALEM_DISTRICT_AREAS } from '../data/salemAreas';
 import { BUSINESS_INFO } from '../data/servicesData';
 
@@ -86,6 +86,61 @@ export const ServiceAreasSection: React.FC = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Salem District Interactive Google Map */}
+        <div className="mt-10 rounded-3xl overflow-hidden border border-rose-200/90 shadow-md bg-white">
+          <div className="p-4 sm:p-5 bg-gradient-to-r from-rose-950 via-[#5A1224] to-amber-950 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-amber-300 flex-shrink-0">
+                <Navigation className="w-5 h-5 text-amber-300" />
+              </div>
+              <div>
+                <h3 className="font-serif font-bold text-base sm:text-lg text-white">
+                  Salem District Service Map (சேலம் மாவட்ட வரைபடம்)
+                </h3>
+                <p className="text-xs text-rose-200">
+                  Salem City, Taluks & Neighborhoods · Certified beautician brings parlour setup directly to your home
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 flex-wrap">
+              <a
+                href={`${BUSINESS_INFO.whatsappUrl}?text=${encodeURIComponent(
+                  'Hello Dhivesri Beauty Parlour, I want to share my Salem home location for booking appointment.'
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold transition-all shadow-xs"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>Share Location on WhatsApp</span>
+              </a>
+
+              <a
+                href="https://maps.google.com/?q=Salem,+Tamil+Nadu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white text-[#5A1224] text-xs font-bold hover:bg-rose-50 transition-all shadow-xs"
+              >
+                <span>Open Google Map</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Embedded Google Map */}
+          <div className="relative w-full h-[320px] sm:h-[380px] md:h-[420px] bg-stone-100">
+            <iframe
+              title="Salem District Service Coverage Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125026.06649755673!2d78.07767852277024!3d11.664325055018617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1ccf52cba0b%3A0xee9989007068ca47!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+              className="w-full h-full border-0"
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
 
         {/* Not seeing your area? Quick helper */}

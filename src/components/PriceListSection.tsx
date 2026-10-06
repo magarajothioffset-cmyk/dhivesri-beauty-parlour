@@ -91,18 +91,6 @@ export const PriceListSection: React.FC<PriceListSectionProps> = ({
           <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
             அனைத்து சேவைகளுக்கும் நிர்ணயிக்கப்பட்ட சரியான விலைகள் கீழே பட்டியலிடப்பட்டுள்ளன. தேவையான சேவைகளை தேர்வு செய்து வாட்ஸ்அப் அல்லது போன் மூலம் உடனடியாக முன்பதிவு செய்யவும்.
           </p>
-
-          {/* Button to View Original Price List Poster */}
-          <div className="pt-2">
-            <button
-              type="button"
-              onClick={() => setShowPosterModal(true)}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-emerald-900 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 transition-all shadow-2xs"
-            >
-              <Image className="w-4 h-4 text-emerald-700" />
-              <span>View Original Price List Poster (பட்டியல் படம்)</span>
-            </button>
-          </div>
         </div>
 
         {/* Filter Bar: Tabs, View Switcher & Search */}

@@ -1,20 +1,56 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Phone, MessageCircle, ArrowRight, Upload, RotateCcw, ShieldCheck, Sparkles, Home } from 'lucide-react';
+import { Phone, MessageCircle, ArrowRight, Upload, RotateCcw, ShieldCheck, Sparkles, Home, CheckCircle2, RefreshCw } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/servicesData';
 import { compressImage } from '../utils/imageCompressor';
 
 export const Hero: React.FC = () => {
-  const [bannerPhoto, setBannerPhoto] = useState<string>('/hero-home-service.jpg?v=authentic');
+  const [bannerPhoto, setBannerPhoto] = useState<string>('/hero-banner.png?v=live-20261006');
   const [uploadSuccess, setUploadSuccess] = useState<boolean>(false);
   const [isUploading, setIsUploading] = useState<boolean>(false);
+  const [syncedToMobile, setSyncedToMobile] = useState<boolean>(false);
+  const [isSyncing, setIsSyncing] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Load custom photo if previously uploaded by owner
+  // Sync photo to server backend so that mobile and shared links get this photo
+  const syncPhotoToServer = async (photoDataUrl: string) => {
+    setIsSyncing(true);
+    const filenames = [
+      'hero-home-service.jpg',
+      'Home page.png',
+      'home-page.png',
+      'Home Facial Treatment Setup.png',
+    ];
+    try {
+      await Promise.all(
+        filenames.map((fn) =>
+          fetch('/api/upload-asset', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              filename: fn,
+              base64: photoDataUrl,
+            }),
+          }).catch(() => null)
+        )
+      );
+      setSyncedToMobile(true);
+      setTimeout(() => setSyncedToMobile(false), 8000);
+    } catch (err) {
+      console.warn('Sync warning', err);
+    } finally {
+      setIsSyncing(false);
+    }
+  };
+
+  // Load custom photo if previously uploaded by owner and AUTO-SYNC to server so mobile sees it
   useEffect(() => {
     try {
       const saved = localStorage.getItem('dhivesri_hero_photo');
       if (saved) {
         setBannerPhoto(saved);
+        if (saved.startsWith('data:')) {
+          syncPhotoToServer(saved);
+        }
       }
     } catch {
       // ignore storage access issues
@@ -116,8 +152,8 @@ export const Hero: React.FC = () => {
         <img
           src={bannerPhoto}
           onError={() => {
-            if (bannerPhoto !== '/hero-home-service.jpg') {
-              setBannerPhoto('/hero-home-service.jpg');
+            if (bannerPhoto !== '/hero-banner.png') {
+              setBannerPhoto('/hero-banner.png');
             }
           }}
           alt="Professional Ladies Beauty Parlour at Your Home in Salem - Dhivesri Beauty Parlour"
@@ -133,32 +169,6 @@ export const Hero: React.FC = () => {
 
         {/* Subtle Decorative Gold Hairline at top edge */}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#D4AF37]/20 via-[#D4AF37]/50 to-transparent" />
-      </div>
-
-      {/* Owner Change Banner Photo Button */}
-      <div className="absolute top-4 right-4 z-20 transition-opacity duration-300 opacity-90 hover:opacity-100">
-        <div className="inline-flex items-center gap-1.5 p-1 rounded-full bg-white/90 backdrop-blur-md border border-[#E9C2CC] shadow-lg">
-          <button
-            type="button"
-            onClick={() => fileInputRef.current?.click()}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-[#4A0E1C] bg-white hover:bg-[#FDF5F7] shadow-xs border border-[#E9C2CC] transition-colors"
-            title="Upload custom full-width hero photo of beautician at home"
-          >
-            <Upload className="w-3.5 h-3.5 text-[#5A1224]" />
-            <span>Change Banner Photo</span>
-          </button>
-
-          {bannerPhoto.startsWith('data:') && (
-            <button
-              type="button"
-              onClick={handleResetPhoto}
-              className="p-1.5 rounded-full bg-white hover:bg-[#FDF5F7] text-stone-600 shadow-xs border border-[#E9C2CC] transition-colors"
-              title="Reset to default photo"
-            >
-              <RotateCcw className="w-3.5 h-3.5" />
-            </button>
-          )}
-        </div>
       </div>
 
       {/* FULL-WIDTH BANNER CONTENT OVERLAY */}
