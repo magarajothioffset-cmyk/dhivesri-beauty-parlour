@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="waxBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF8F5" />
+      <stop offset="50%" stop-color="#F8ECE6" />
+      <stop offset="100%" stop-color="#EEDBD2" />
+    </linearGradient>
+    <linearGradient id="heaterMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#E4DDD8" />
+      <stop offset="100%" stop-color="#B8ADA5" />
+    </linearGradient>
+    <linearGradient id="honeyWax" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCD568" />
+      <stop offset="60%" stop-color="#EAA624" />
+      <stop offset="100%" stop-color="#C57E0A" />
+    </linearGradient>
+    <linearGradient id="woodSpatula" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2BE9B" />
+      <stop offset="50%" stop-color="#CDA37B" />
+      <stop offset="100%" stop-color="#AF855D" />
+    </linearGradient>
+    <filter id="shadowW" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#5C4138" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Background Wall -->
+  <rect width="800" height="420" fill="url(#waxBg)" />
+
+  <!-- Soft Ambient Glow -->
+  <circle cx="400" cy="210" r="270" fill="#FFF9F5" opacity="0.75" />
+
+  <!-- Countertop -->
+  <rect y="420" width="800" height="180" fill="#DFD3CC" />
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#C4B5AD" stroke-width="2" />
+
+  <!-- Stack of Single-Use Hygienic Wax Strips (Left) -->
+  <g filter="url(#shadowW)">
+    <rect x="90" y="360" width="160" height="70" rx="8" fill="#FFFFFF" stroke="#E6DCD6" stroke-width="2" />
+    <!-- Strip Layers -->
+    <line x1="90" y1="375" x2="250" y2="375" stroke="#F0E8E4" stroke-width="2.5" />
+    <line x1="90" y1="390" x2="250" y2="390" stroke="#F0E8E4" stroke-width="2.5" />
+    <line x1="90" y1="405" x2="250" y2="405" stroke="#F0E8E4" stroke-width="2.5" />
+    <!-- Top Strip slightly askew -->
+    <rect x="95" y="340" width="150" height="30" rx="6" transform="rotate(-6 95 340)" fill="#FAF7F5" stroke="#E0D5CF" stroke-width="1.5" />
+    <text x="170" y="358" fill="#9F2B48" font-family="sans-serif" font-size="10" font-weight="bold" letter-spacing="1">100% DISPOSABLE</text>
+  </g>
+
+  <!-- Professional Wax Heater Pot (Center) -->
+  <g filter="url(#shadowW)">
+    <!-- Base Shadow -->
+    <ellipse cx="390" cy="435" rx="110" ry="20" fill="#B0A097" opacity="0.4" />
+
+    <!-- Pot Body -->
+    <rect x="290" y="270" width="200" height="155" rx="28" fill="url(#heaterMetal)" stroke="#D4C8C0" stroke-width="2" />
+    <!-- Thermostat Knob -->
+    <circle cx="390" cy="385" r="16" fill="#9F2B48" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="390" y1="385" x2="390" y2="374" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+    <!-- Indicator light -->
+    <circle cx="440" cy="385" r="5" fill="#34D399" />
+
+    <!-- Inner Wax Well (Top Rim) -->
+    <ellipse cx="390" cy="275" rx="90" ry="32" fill="#756A63" />
+    <ellipse cx="390" cy="275" rx="82" ry="26" fill="url(#honeyWax)" />
+
+    <!-- Wooden Wax Spatula Resting in Pot -->
+    <path d="M 330 220 L 410 320 L 422 312 L 342 212 Z" fill="url(#woodSpatula)" stroke="#9E754E" stroke-width="1" />
+    <!-- Golden Wax Coating on Spatula Tip -->
+    <path d="M 385 288 Q 410 320 422 312 Q 400 280 385 288" fill="url(#honeyWax)" />
+    <!-- Wax Drip Droplet -->
+    <circle cx="420" cy="335" r="6" fill="url(#honeyWax)" />
+    <circle cx="420" cy="333" r="2.5" fill="#FFFFFF" opacity="0.6" />
+  </g>
+
+  <!-- Soothing Post-Wax Aloe Vera Gel Dispenser (Right) -->
+  <g filter="url(#shadowW)">
+    <rect x="540" y="300" width="75" height="130" rx="16" fill="#E8F5E9" stroke="#C8E6C9" stroke-width="2" />
+    <!-- Dispenser Pump Top -->
+    <rect x="568" y="275" width="20" height="25" fill="#FFFFFF" stroke="#C4B9B2" stroke-width="1.5" />
+    <path d="M 555 270 L 600 270 L 600 260 L 555 260 Z" fill="#9F2B48" />
+    <path d="M 555 265 L 535 270" stroke="#9F2B48" stroke-width="5" stroke-linecap="round" />
+
+    <!-- Gel Bottle Label -->
+    <rect x="548" y="335" width="60" height="65" rx="6" fill="#FFFFFF" />
+    <line x1="556" y1="352" x2="600" y2="352" stroke="#2E7D32" stroke-width="2.5" />
+    <line x1="556" y1="364" x2="594" y2="364" stroke="#9F2B48" stroke-width="2" />
+    <line x1="556" y1="375" x2="588" y2="375" stroke="#B0BEC5" stroke-width="1.5" />
+  </g>
+
+  <!-- Lavender Sprig for soothing touch -->
+  <g>
+    <path d="M 640 440 Q 670 380 690 320" stroke="#689F38" stroke-width="3" fill="none" stroke-linecap="round" />
+    <ellipse cx="680" cy="335" rx="7" ry="14" fill="#9575CD" opacity="0.8" />
+    <ellipse cx="688" cy="345" rx="7" ry="14" fill="#7E57C2" opacity="0.85" />
+    <ellipse cx="675" cy="360" rx="7" ry="14" fill="#9575CD" opacity="0.8" />
+    <ellipse cx="665" cy="380" rx="7" ry="14" fill="#7E57C2" opacity="0.85" />
+  </g>
+
+  <!-- Bottom Title Tag Banner -->
+  <rect x="240" y="525" width="320" height="36" rx="18" fill="#9F2B48" opacity="0.95" />
+  <text x="400" y="548" fill="#FFFFFF" font-family="'Playfair Display', serif, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" letter-spacing="1">
+    HYGIENIC WAXING SETUP
+  </text>
+</svg>

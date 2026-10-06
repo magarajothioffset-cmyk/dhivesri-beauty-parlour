@@ -1,0 +1,218 @@
+<svg viewBox="0 0 600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="roomBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#FFF2E8" />
+      <stop offset="50%" stopColor="#F9E2D2" />
+      <stop offset="100%" stopColor="#EDC7B2" />
+    </linearGradient>
+    <linearGradient id="lavenderDress" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#E9B7CE" />
+      <stop offset="50%" stopColor="#D89EBA" />
+      <stop offset="100%" stopColor="#BA799A" />
+    </linearGradient>
+    <linearGradient id="goldJewel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFF2A3" />
+      <stop offset="50%" stopColor="#E5B236" />
+      <stop offset="100%" stopColor="#8C5C08" />
+    </linearGradient>
+    <linearGradient id="skinBeautician" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#F5D0B5" />
+      <stop offset="70%" stopColor="#E8B896" />
+      <stop offset="100%" stopColor="#D99E79" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#5A1A2B" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Cozy Home Salon Interior -->
+  <rect width="600" height="900" fill="url(#roomBg)" />
+
+  <!-- Background Warm Windows & Fairy Lights -->
+  <circle cx="150" cy="180" r="14" fill="#FFE58F" opacity="0.6" filter="blur(6px)" />
+  <circle cx="210" cy="140" r="10" fill="#FFE58F" opacity="0.6" filter="blur(4px)" />
+  <circle cx="260" cy="190" r="12" fill="#FFE58F" opacity="0.5" filter="blur(5px)" />
+  <circle cx="90" cy="350" r="18" fill="#FFD591" opacity="0.6" filter="blur(8px)" />
+
+  <!-- Background: Lady Client lying down for facial -->
+  <g transform="translate(380, 480)">
+    <!-- White salon bed drape -->
+    <path d="M -90 120 C -40 90 80 80 160 110 L 180 320 L -120 320 Z" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
+    
+    <!-- Client head and neck -->
+    <path d="M 0 60 C 20 40 60 40 80 60 L 90 90 L -10 90 Z" fill="#FAD1B4" />
+    <!-- White facial pack / mask on face -->
+    <ellipse cx="40" cy="40" rx="36" ry="44" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2" />
+    <!-- Hair wrap / headband -->
+    <path d="M -5 20 C 30 -5 70 -5 85 20 L 75 35 C 50 15 20 15 5 35 Z" fill="#E2E8F0" />
+    
+    <!-- Assistant beautician in background (Black uniform with pink trim) -->
+    <g transform="translate(60, -180)">
+      <!-- Black top -->
+      <path d="M 0 110 C 20 90 90 90 110 110 L 130 260 L -20 260 Z" fill="#1E293B" />
+      <path d="M 30 110 L 55 160 L 80 110" stroke="#F43F5E" stroke-width="4" fill="none" />
+      <!-- Head & Hair -->
+      <circle cx="55" cy="50" r="32" fill="#0F172A" />
+      <ellipse cx="55" cy="65" rx="22" ry="26" fill="#D99E79" />
+      <!-- Hands applying facial cream -->
+      <path d="M 10 170 Q -20 220 -20 240 Q -10 245 10 220 Z" fill="#D99E79" />
+      <rect x="-35" y="235" width="24" height="6" rx="2" fill="#F59E0B" transform="rotate(35 -35 235)" />
+    </g>
+  </g>
+
+  <!-- Foreground Salon Skincare Trolley on Bottom Right -->
+  <g transform="translate(420, 640)" filter="url(#softShadow)">
+    <rect x="0" y="40" width="160" height="240" rx="10" fill="#0F172A" opacity="0.9" />
+    <rect x="5" y="45" width="150" height="6" fill="#334155" />
+    <!-- Cream Jars & Pump Bottles -->
+    <rect x="15" y="0" width="26" height="42" rx="4" fill="#FFFFFF" stroke="#CBD5E1" />
+    <rect x="23" y="-8" width="10" height="8" rx="2" fill="#F59E0B" />
+    <rect x="50" y="5" width="24" height="37" rx="4" fill="#F43F5E" />
+    <rect x="80" y="-4" width="28" height="46" rx="4" fill="#FFFFFF" stroke="#CBD5E1" />
+    <rect x="90" y="-12" width="8" height="8" rx="2" fill="#0F172A" />
+    <rect x="115" y="14" width="28" height="28" rx="6" fill="#F59E0B" />
+    <!-- Fresh Green Plant in Small Pot -->
+    <rect x="8" y="140" width="36" height="36" rx="4" fill="#FFFFFF" />
+    <circle cx="26" cy="130" r="16" fill="#10B981" />
+    <circle cx="16" cy="120" r="12" fill="#059669" />
+    <circle cx="36" cy="122" r="14" fill="#34D399" />
+  </g>
+
+  <!-- Foreground Main Subject: Real Dhivesri Beautician -->
+  <g transform="translate(20, 90)">
+    
+    <!-- Flowing Lavender Kurti / Salwar with Floral Embroidery -->
+    <!-- Torso and Folded Arms Pose -->
+    <g transform="translate(30, 270)">
+      <!-- Dress Main Body -->
+      <path
+        d="M 110 50 C 40 90 -20 180 -10 540 L 440 540 C 450 180 390 90 320 50 Z"
+        fill="url(#lavenderDress)"
+      />
+
+      <!-- Delicate White Floral Embroidered Pattern on Dress -->
+      <g stroke="#FFFFFF" stroke-width="1.2" opacity="0.65" fill="none">
+        <!-- Small botanical motifs across kurti -->
+        <circle cx="120" cy="130" r="4" fill="#FFF" />
+        <circle cx="180" cy="110" r="4" fill="#FFF" />
+        <circle cx="240" cy="130" r="4" fill="#FFF" />
+        <circle cx="300" cy="110" r="4" fill="#FFF" />
+        <circle cx="150" cy="170" r="4" fill="#FFF" />
+        <circle cx="210" cy="160" r="4" fill="#FFF" />
+        <circle cx="270" cy="170" r="4" fill="#FFF" />
+        <circle cx="100" cy="220" r="4" fill="#FFF" />
+        <circle cx="160" cy="230" r="4" fill="#FFF" />
+        <circle cx="220" cy="220" r="4" fill="#FFF" />
+        <circle cx="280" cy="230" r="4" fill="#FFF" />
+        <circle cx="340" cy="220" r="4" fill="#FFF" />
+      </g>
+
+      <!-- Lavender Dupatta draped over Left Shoulder -->
+      <path
+        d="M 40 70 C 10 130 -10 240 -10 530 L 70 530 C 70 300 80 180 110 70 Z"
+        fill="#C986A8"
+        opacity="0.95"
+      />
+      <!-- Neckline embroidery lace -->
+      <path d="M 180 50 Q 215 120 250 50" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-dasharray="3 3" />
+
+      <!-- Folded Arms & Forearms -->
+      <!-- Left Forearm crossed over front -->
+      <path
+        d="M 80 250 C 110 320 250 340 330 270 L 310 210 C 240 270 140 260 110 200 Z"
+        fill="url(#skinBeautician)"
+      />
+      <!-- Right Forearm crossed underneath -->
+      <path
+        d="M 330 250 C 300 320 180 340 100 280 L 120 220 C 180 270 270 260 300 200 Z"
+        fill="url(#skinBeautician)"
+      />
+
+      <!-- Gold Bangles on Wrists (Thick golden Kada / Valayal) -->
+      <ellipse cx="140" cy="275" rx="14" ry="7" fill="url(#goldJewel)" stroke="#8C5C08" stroke-width="1.5" />
+      <ellipse cx="280" cy="275" rx="14" ry="7" fill="url(#goldJewel)" stroke="#8C5C08" stroke-width="1.5" />
+      <ellipse cx="142" cy="283" rx="14" ry="6" fill="url(#goldJewel)" stroke="#8C5C08" stroke-width="1.5" />
+      <ellipse cx="278" cy="283" rx="14" ry="6" fill="url(#goldJewel)" stroke="#8C5C08" stroke-width="1.5" />
+
+      <!-- Gold Chain around Neck -->
+      <path d="M 175 45 Q 215 110 255 45" stroke="url(#goldJewel)" stroke-width="4" fill="none" />
+      <circle cx="215" cy="110" r="5" fill="url(#goldJewel)" />
+    </g>
+
+    <!-- Beautician Head & Warm Facial Expression -->
+    <g transform="translate(145, 10)">
+      <!-- Dark cascading hair with soft waves -->
+      <path
+        d="M 20 90 C -20 160 -10 250 20 310 C 30 260 40 200 40 140 C 40 60 100 10 170 10 C 240 10 290 60 290 140 C 290 200 300 260 310 310 C 330 250 340 160 310 90 C 280 20 230 -10 160 -10 C 90 -10 40 20 20 90 Z"
+        fill="#1C1412"
+      />
+
+      <!-- Beautiful South Indian Face Shape -->
+      <path
+        d="M 75 140 C 70 220 110 280 165 285 C 220 280 260 220 255 140 C 255 70 215 40 165 40 C 115 40 75 70 75 140 Z"
+        fill="url(#skinBeautician)"
+      />
+
+      <!-- Hairline parting with neat soft curls framing forehead -->
+      <path d="M 75 110 C 100 70 165 65 170 85 C 180 65 230 70 255 110 C 245 80 210 50 165 50 C 120 50 85 80 75 110 Z" fill="#140E0D" />
+
+      <!-- Red Bindi on Forehead -->
+      <circle cx="165" cy="115" r="4.5" fill="#DC2626" />
+
+      <!-- Expressive Almond Eyes with soft eyeliner & defined eyebrows -->
+      <!-- Left Eyebrow & Eye -->
+      <path d="M 105 130 Q 128 120 145 132" stroke="#261612" stroke-width="4.5" stroke-linecap="round" fill="none" />
+      <path d="M 108 144 Q 125 135 142 144 Q 125 153 108 144 Z" fill="#FFFFFF" />
+      <circle cx="126" cy="144" r="6" fill="#3E2723" />
+      <circle cx="127" cy="143" r="2.5" fill="#000000" />
+      <circle cx="129" cy="141" r="1.2" fill="#FFFFFF" />
+
+      <!-- Right Eyebrow & Eye -->
+      <path d="M 185 132 Q 202 120 225 130" stroke="#261612" stroke-width="4.5" stroke-linecap="round" fill="none" />
+      <path d="M 188 144 Q 205 135 222 144 Q 205 153 188 144 Z" fill="#FFFFFF" />
+      <circle cx="204" cy="144" r="6" fill="#3E2723" />
+      <circle cx="203" cy="143" r="2.5" fill="#000000" />
+      <circle cx="201" cy="141" r="1.2" fill="#FFFFFF" />
+
+      <!-- Nose with delicate nose ring / stud shimmer -->
+      <path d="M 165 130 L 163 175 Q 165 185 172 182" stroke="#B87352" stroke-width="2" fill="none" stroke-linecap="round" />
+      <circle cx="157" cy="177" r="1.5" fill="#FFF" />
+
+      <!-- Warm, Friendly, Welcoming Smile with Rose-Plum Lipstick -->
+      <path
+        d="M 138 206 Q 165 225 192 206 Q 165 235 138 206 Z"
+        fill="#9F1239"
+      />
+      <!-- Pearly white teeth glimpse -->
+      <path d="M 146 209 Q 165 217 184 209" fill="#FFFFFF" stroke="#BE123C" stroke-width="1" />
+
+      <!-- Golden Jhumka Earrings -->
+      <g transform="translate(68, 175)">
+        <circle cx="0" cy="0" r="3.5" fill="url(#goldJewel)" />
+        <path d="M -6 6 C -6 2 6 2 6 6 Z" fill="url(#goldJewel)" />
+      </g>
+      <g transform="translate(262, 175)">
+        <circle cx="0" cy="0" r="3.5" fill="url(#goldJewel)" />
+        <path d="M -6 6 C -6 2 6 2 6 6 Z" fill="url(#goldJewel)" />
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Top Right Inset: Official Dhivesri Logo Emblem as seen on original photo -->
+  <g transform="translate(450, 140) scale(0.4)" filter="url(#softShadow)">
+    <circle cx="0" cy="0" r="140" fill="#FFF9F2" stroke="url(#goldJewel)" stroke-width="8" />
+    <circle cx="0" cy="0" r="130" fill="#7A0C2E" />
+    <text x="0" y="5" text-anchor="middle" font-family="'Playfair Display', serif" font-size="34" font-weight="bold" fill="url(#goldJewel)">Dhivesri</text>
+    <text x="0" y="32" text-anchor="middle" font-family="'Cinzel', serif" font-size="14" font-weight="bold" fill="#FDE68A" letter-spacing="2">BEAUTY PARLOUR</text>
+    <rect x="-80" y="50" width="160" height="26" rx="13" fill="#4A051B" stroke="url(#goldJewel)" stroke-width="2" />
+    <text x="0" y="68" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold" fill="url(#goldJewel)">HOME SERVICE 🏠</text>
+    <text x="0" y="94" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="bold" fill="#FDE68A">LADIES ONLY · SALEM</text>
+  </g>
+
+  <!-- Subtle bottom label -->
+  <rect x="20" y="845" width="560" height="40" rx="12" fill="#FFFFFF" opacity="0.9" />
+  <text x="300" y="870" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="bold" fill="#7E1E34">
+    Dhivesri Beauty Parlour · Ladies Only Home Service, Salem
+  </text>
+</svg>

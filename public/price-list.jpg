@@ -1,0 +1,203 @@
+<svg viewBox="0 0 700 1050" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="deepGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#0B3B24" />
+      <stop offset="50%" stopColor="#072C1A" />
+      <stop offset="100%" stopColor="#031E12" />
+    </linearGradient>
+    <linearGradient id="goldPill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFE066" />
+      <stop offset="50%" stopColor="#E5B21A" />
+      <stop offset="100%" stopColor="#B38600" />
+    </linearGradient>
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFF2A3" />
+      <stop offset="50%" stopColor="#D4AF37" />
+      <stop offset="100%" stopColor="#8C5C08" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Poster Canvas -->
+  <rect width="700" height="1050" fill="url(#deepGreen)" />
+
+  <!-- Double Golden & White Frame Borders -->
+  <rect x="25" y="25" width="650" height="1000" rx="12" fill="none" stroke="#E2E8F0" stroke-width="2.5" />
+  <rect x="35" y="35" width="630" height="980" rx="8" fill="none" stroke="url(#goldTrim)" stroke-width="1.5" stroke-dasharray="8 4" />
+
+  <!-- Ornate Corner Filigree (Top Left, Top Right, Bottom Left, Bottom Right) -->
+  <g stroke="url(#goldTrim)" stroke-width="2" fill="none">
+    <!-- Top-Left Corner -->
+    <path d="M 45 85 C 45 55 55 45 85 45 M 45 70 C 45 50 50 45 70 45" />
+    <circle cx="58" cy="58" r="4" fill="url(#goldTrim)" />
+    <!-- Top-Right Corner -->
+    <path d="M 655 85 C 655 55 645 45 615 45 M 655 70 C 655 50 650 45 630 45" />
+    <circle cx="642" cy="58" r="4" fill="url(#goldTrim)" />
+    <!-- Bottom-Left Corner -->
+    <path d="M 45 965 C 45 995 55 1005 85 1005 M 45 980 C 45 1000 50 1005 70 1005" />
+    <circle cx="58" cy="992" r="4" fill="url(#goldTrim)" />
+    <!-- Bottom-Right Corner -->
+    <path d="M 655 965 C 655 995 645 1005 615 1005 M 655 980 C 655 1000 650 1005 630 1005" />
+    <circle cx="642" cy="992" r="4" fill="url(#goldTrim)" />
+  </g>
+
+  <!-- ================= 1. HAIR CUT SECTION ================= -->
+  <g transform="translate(70, 70)">
+    <!-- Category Header Pill -->
+    <rect x="0" y="0" width="130" height="34" rx="10" fill="url(#goldPill)" />
+    <text x="65" y="23" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#062818">Hair Cut</text>
+
+    <!-- Items -->
+    <g font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">
+      <text x="25" y="65">Eye Brow</text>
+      <text x="180" y="65">-  ₹ 40/-</text>
+
+      <text x="25" y="98">Straight Cut</text>
+      <text x="180" y="98">-  ₹ 120/-</text>
+
+      <text x="25" y="131">U Cut</text>
+      <text x="180" y="131">-  ₹ 300/-</text>
+    </g>
+
+    <!-- Eyebrow Threading Photo Thumbnail on right -->
+    <g transform="translate(420, 20)">
+      <circle cx="50" cy="50" r="52" fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <circle cx="50" cy="50" r="48" fill="#F43F5E" />
+      <circle cx="50" cy="50" r="48" fill="url(#deepGreen)" opacity="0.1" />
+      <path d="M 25 55 Q 50 35 75 52" stroke="#FFFFFF" stroke-width="3" fill="none" />
+      <path d="M 20 40 L 80 60" stroke="#FDE68A" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- ================= 2. WAXING SECTION ================= -->
+  <g transform="translate(70, 220)">
+    <!-- Leg waxing photo on left -->
+    <g transform="translate(20, 40)">
+      <circle cx="50" cy="50" r="50" fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <circle cx="50" cy="50" r="47" fill="#FBCFE8" />
+      <path d="M 20 80 Q 50 20 80 40" stroke="#BE185D" stroke-width="4" fill="none" />
+      <rect x="35" y="30" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#E2E8F0" />
+    </g>
+
+    <!-- Category Header Pill -->
+    <g transform="translate(190, 0)">
+      <rect x="0" y="0" width="130" height="34" rx="10" fill="url(#goldPill)" />
+      <text x="65" y="23" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#062818">Waxing</text>
+    </g>
+
+    <!-- Items -->
+    <g transform="translate(190, 0)" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">
+      <text x="25" y="62">Underarms Wax</text>
+      <text x="200" y="62">-  ₹ 100/-</text>
+
+      <text x="25" y="90">Half Hand Wax</text>
+      <text x="200" y="90">-  ₹ 150/-</text>
+
+      <text x="25" y="118">Full Hand Wax</text>
+      <text x="200" y="118">-  ₹ 300/-</text>
+
+      <text x="25" y="146">Half Leg Wax</text>
+      <text x="200" y="146">-  ₹ 250/-</text>
+
+      <text x="25" y="174">Full Leg Wax</text>
+      <text x="200" y="174">-  ₹ 500/-</text>
+
+      <text x="25" y="202">Manicure</text>
+      <text x="200" y="202">-  ₹ 400/-</text>
+
+      <text x="25" y="230">Pedicure</text>
+      <text x="200" y="230">-  ₹ 500/-</text>
+
+      <text x="25" y="258">Oil Massage</text>
+      <text x="200" y="258">-  ₹ 500/-</text>
+
+      <text x="25" y="286">Hair Coloring</text>
+      <text x="200" y="286">-  ₹ 500/-</text>
+    </g>
+  </g>
+
+  <!-- ================= 3. FACIAL SECTION ================= -->
+  <g transform="translate(70, 520)">
+    <!-- Category Header Pill -->
+    <rect x="0" y="0" width="130" height="34" rx="10" fill="url(#goldPill)" />
+    <text x="65" y="23" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#062818">Facial</text>
+
+    <!-- Items -->
+    <g font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">
+      <text x="25" y="62">Fruit Facial</text>
+      <text x="240" y="62">-  ₹ 500/-</text>
+
+      <text x="25" y="90">Papaya Facial</text>
+      <text x="240" y="90">-  ₹ 500/-</text>
+
+      <text x="25" y="118">Saffron Facial</text>
+      <text x="240" y="118">-  ₹ 500/-</text>
+
+      <text x="25" y="146">Wine Facial</text>
+      <text x="240" y="146">-  ₹ 700/-</text>
+
+      <text x="25" y="174">Whitening Facial</text>
+      <text x="240" y="174">-  ₹ 800/-</text>
+
+      <text x="25" y="202">Pearl Facial</text>
+      <text x="240" y="202">-  ₹ 800/-</text>
+
+      <text x="25" y="230">Gold Facial</text>
+      <text x="240" y="230">-  ₹ 800/-</text>
+
+      <text x="25" y="258">Silver Facial</text>
+      <text x="240" y="258">-  ₹ 800/-</text>
+
+      <text x="25" y="286">Diamond Facial</text>
+      <text x="240" y="286">-  ₹ 1000</text>
+
+      <text x="25" y="314">Polishing Facial</text>
+      <text x="240" y="314">-  ₹ 1500/-</text>
+
+      <text x="25" y="342">Back Neck Polishing</text>
+      <text x="240" y="342">-  ₹ 800/-</text>
+    </g>
+
+    <!-- Gold Facial & Relaxing Facial Photos on right -->
+    <g transform="translate(430, 20)">
+      <circle cx="50" cy="50" r="52" fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <circle cx="50" cy="50" r="48" fill="#FDE047" />
+      <circle cx="50" cy="50" r="40" fill="#EAB308" />
+    </g>
+    <g transform="translate(430, 160)">
+      <circle cx="50" cy="50" r="52" fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <circle cx="50" cy="50" r="48" fill="#F8FAFC" />
+      <ellipse cx="50" cy="50" rx="35" ry="30" fill="#FCD34D" opacity="0.6" />
+    </g>
+  </g>
+
+  <!-- ================= 4. BLEACH SECTION ================= -->
+  <g transform="translate(70, 885)">
+    <!-- Bleach photo on left -->
+    <g transform="translate(20, 10)">
+      <circle cx="45" cy="45" r="45" fill="none" stroke="#FFFFFF" stroke-width="3" />
+      <circle cx="45" cy="45" r="42" fill="#FED7AA" />
+      <ellipse cx="45" cy="45" rx="30" ry="25" fill="#FFFFFF" opacity="0.8" />
+    </g>
+
+    <!-- Category Header Pill -->
+    <g transform="translate(190, 0)">
+      <rect x="0" y="0" width="130" height="34" rx="10" fill="url(#goldPill)" />
+      <text x="65" y="23" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#062818">Bleach</text>
+    </g>
+
+    <!-- Items -->
+    <g transform="translate(190, 0)" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">
+      <text x="25" y="62">Face Bleach</text>
+      <text x="200" y="62">-  ₹ 250/-</text>
+
+      <text x="25" y="90">Hand Bleach</text>
+      <text x="200" y="90">-  ₹ 350/-</text>
+
+      <text x="25" y="118">Neck Bleach</text>
+      <text x="200" y="118">-  ₹ 350/-</text>
+
+      <text x="25" y="146">Gold Glow Bleach</text>
+      <text x="200" y="146">-  ₹ 400/-</text>
+    </g>
+  </g>
+</svg>

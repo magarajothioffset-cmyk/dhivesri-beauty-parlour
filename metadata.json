@@ -1,0 +1,6 @@
+{
+  "name": "Dhivesri Beauty Parlour – Salem Home Service",
+  "description": "Ladies-only beauty parlour home service across Salem District. Facial, Haircut, Waxing, Bleach, Manicure & Pedicure at your doorstep. Call or WhatsApp 9025970903.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

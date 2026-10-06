@@ -1,0 +1,313 @@
+<svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Metallic Gold Gradients -->
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFF8D6" />
+      <stop offset="25%" stopColor="#F5D77F" />
+      <stop offset="50%" stopColor="#D4AF37" />
+      <stop offset="75%" stopColor="#AA7A1E" />
+      <stop offset="100%" stopColor="#6E4A0C" />
+    </linearGradient>
+
+    <linearGradient id="goldBevel" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#FFEAA7" />
+      <stop offset="40%" stopColor="#DFB251" />
+      <stop offset="80%" stopColor="#9E7019" />
+      <stop offset="100%" stopColor="#5E3D07" />
+    </linearGradient>
+
+    <radialGradient id="innerCreamGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stopColor="#FFFFFF" />
+      <stop offset="45%" stopColor="#FFF9F2" />
+      <stop offset="85%" stopColor="#F9EDE0" />
+      <stop offset="100%" stopColor="#E8D1BC" />
+    </radialGradient>
+
+    <!-- Deep Magenta / Wine Velvet Gradients -->
+    <linearGradient id="burgundyPill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#8A0C35" />
+      <stop offset="50%" stopColor="#630623" />
+      <stop offset="100%" stopColor="#3D0314" />
+    </linearGradient>
+
+    <linearGradient id="bannerVelvet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#A31343" />
+      <stop offset="20%" stopColor="#7E0C30" />
+      <stop offset="80%" stopColor="#4A041A" />
+      <stop offset="100%" stopColor="#2E010F" />
+    </linearGradient>
+
+    <filter id="shadowGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#4A051B" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Outer Luxury Gold Crest Ring -->
+  <circle cx="250" cy="250" r="238" fill="url(#goldRim)" />
+  <circle cx="250" cy="250" r="226" fill="#3D0516" />
+  <circle cx="250" cy="250" r="222" fill="url(#goldBevel)" />
+  <circle cx="250" cy="250" r="214" fill="url(#innerCreamGlow)" />
+
+  <!-- Filigree Floral Ornaments on Outer Rim -->
+  <circle cx="250" cy="250" r="218" stroke="url(#goldRim)" stroke-width="1.5" stroke-dasharray="4 3" />
+
+  <!-- Top Decorative Section: Lady Profile & Beauty Tools -->
+  <g transform="translate(0, 0)">
+    <!-- Lady Hair & Profile -->
+    <!-- Jet black waving hair -->
+    <path d="M 170 120 C 130 110 110 150 100 190 C 130 170 150 180 160 200 C 180 180 190 150 200 130 Z" fill="#1C1412" />
+    <path d="M 130 140 C 90 180 110 240 140 260 C 120 230 130 190 150 170 Z" fill="#1C1412" />
+    
+    <!-- Face & Neck Silhouette with gentle skin tone -->
+    <path d="M 170 120 C 205 110 235 135 240 175 C 242 195 235 210 225 220 C 215 230 200 245 195 265 L 165 260 C 170 240 175 225 170 210 Z" fill="#F8DAC2" />
+    
+    <!-- Hair bun / flow -->
+    <path d="M 150 105 C 190 75 245 95 245 145 C 235 125 200 110 165 118 Z" fill="#140E0D" />
+    
+    <!-- Closed graceful eye with long eyelashes & brow -->
+    <path d="M 215 158 Q 228 152 238 160" stroke="#2B1810" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 218 165 Q 227 172 236 166" stroke="#4A1521" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <!-- Pink lips -->
+    <path d="M 230 195 Q 238 191 245 197 Q 238 206 230 195 Z" fill="#E11D48" />
+
+    <!-- Bright Pink Hibiscus Flower in Hair -->
+    <g transform="translate(135, 125)">
+      <!-- Petals -->
+      <path d="M 0 0 C -25 -20 -35 10 -15 25 C -5 30 10 20 0 0 Z" fill="#F43F5E" />
+      <path d="M 0 0 C -10 -35 25 -35 25 -10 C 25 10 10 20 0 0 Z" fill="#FB7185" />
+      <path d="M 0 0 C 15 -25 45 -5 35 15 C 25 25 10 15 0 0 Z" fill="#E11D48" />
+      <path d="M 0 0 C 30 5 25 35 5 35 C -10 35 -10 20 0 0 Z" fill="#BE123C" />
+      <path d="M 0 0 C -20 15 -25 35 -5 40 C 10 40 5 20 0 0 Z" fill="#FDA4AF" />
+      <!-- Golden Stamen -->
+      <path d="M 0 0 Q 15 10 28 8" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" fill="none" />
+      <circle cx="28" cy="8" r="3" fill="#F59E0B" />
+    </g>
+
+    <!-- Golden Jhumka Earring -->
+    <g transform="translate(185, 205)">
+      <circle cx="0" cy="0" r="3.5" fill="#F59E0B" />
+      <path d="M -7 8 C -7 3 7 3 7 8 Z" fill="url(#goldRim)" />
+      <circle cx="-5" cy="11" r="1.2" fill="#FDE68A" />
+      <circle cx="0" cy="12" r="1.5" fill="#FDE68A" />
+      <circle cx="5" cy="11" r="1.2" fill="#FDE68A" />
+    </g>
+
+    <!-- Right Side: Beauty Parlour Tools -->
+    <!-- Golden Scissors -->
+    <g transform="translate(390, 160) rotate(-35)">
+      <!-- Handles -->
+      <ellipse cx="-12" cy="70" rx="9" ry="14" fill="none" stroke="url(#goldRim)" stroke-width="4" />
+      <ellipse cx="12" cy="70" rx="9" ry="14" fill="none" stroke="url(#goldRim)" stroke-width="4" />
+      <!-- Pivot screw -->
+      <circle cx="0" cy="40" r="4" fill="#FFEAA7" stroke="#7A4E0B" stroke-width="1.5" />
+      <!-- Blades -->
+      <path d="M -4 40 L -2 -25 L 0 -28 L 2 40 Z" fill="url(#goldRim)" />
+      <path d="M 4 40 L 2 -25 L 0 -28 L -2 40 Z" fill="url(#goldBevel)" />
+    </g>
+
+    <!-- Salon Styling Comb -->
+    <g transform="translate(370, 140) rotate(15)">
+      <rect x="0" y="0" width="16" height="75" rx="3" fill="#262626" />
+      <!-- Comb teeth -->
+      <rect x="16" y="5" width="22" height="2" fill="#171717" />
+      <rect x="16" y="11" width="22" height="2" fill="#171717" />
+      <rect x="16" y="17" width="22" height="2" fill="#171717" />
+      <rect x="16" y="23" width="22" height="2" fill="#171717" />
+      <rect x="16" y="29" width="22" height="2" fill="#171717" />
+      <rect x="16" y="35" width="22" height="2" fill="#171717" />
+      <rect x="16" y="41" width="22" height="2" fill="#171717" />
+      <rect x="16" y="47" width="22" height="2" fill="#171717" />
+      <rect x="16" y="53" width="22" height="2" fill="#171717" />
+    </g>
+
+    <!-- Fluffy Golden & Pink Makeup Brush -->
+    <g transform="translate(315, 115) rotate(10)">
+      <!-- Golden handle -->
+      <rect x="8" y="50" width="14" height="60" rx="4" fill="url(#goldRim)" />
+      <!-- Ferrule -->
+      <rect x="6" y="32" width="18" height="20" rx="2" fill="url(#goldBevel)" />
+      <!-- Bristles (Black to Pink Ombre) -->
+      <path d="M 6 32 C 0 10 6 -8 15 -10 C 24 -8 30 10 24 32 Z" fill="#2B151E" />
+      <path d="M 9 20 C 6 5 11 -6 15 -8 C 19 -6 24 5 21 20 Z" fill="#E11D48" opacity="0.8" />
+      <path d="M 12 10 C 11 0 13 -6 15 -7 C 17 -6 19 0 18 10 Z" fill="#FDA4AF" opacity="0.9" />
+    </g>
+
+    <!-- Lipstick -->
+    <g transform="translate(285, 130) rotate(-15)">
+      <rect x="0" y="35" width="18" height="40" rx="2" fill="#171717" stroke="url(#goldRim)" stroke-width="2" />
+      <rect x="2" y="18" width="14" height="18" fill="url(#goldRim)" />
+      <!-- Lipstick bullet cut -->
+      <path d="M 2 18 L 2 5 C 2 0 16 -10 16 8 L 16 18 Z" fill="#E11D48" />
+    </g>
+
+    <!-- Mascara Wand -->
+    <g transform="translate(360, 110) rotate(25)">
+      <rect x="0" y="40" width="8" height="50" rx="2" fill="url(#goldRim)" />
+      <rect x="2" y="0" width="4" height="40" fill="#737373" />
+      <!-- Brush bristles -->
+      <rect x="-2" y="2" width="12" height="22" rx="6" fill="#171717" />
+    </g>
+
+    <!-- Pink Blossom Bowl -->
+    <g transform="translate(345, 185)">
+      <ellipse cx="20" cy="18" rx="28" ry="12" fill="url(#goldRim)" />
+      <ellipse cx="20" cy="14" rx="25" ry="9" fill="#F43F5E" />
+      <circle cx="12" cy="12" r="6" fill="#FDA4AF" />
+      <circle cx="24" cy="14" r="5" fill="#FFF1F2" />
+      <circle cx="18" cy="10" r="4" fill="#F43F5E" />
+    </g>
+  </g>
+
+  <!-- Central Velvet Banner with Golden Script "Dhivesri" -->
+  <g transform="translate(250, 305)" filter="url(#shadowGlow)">
+    <!-- Burgundy Arch/Banner -->
+    <path
+      d="M -200 -20 C -150 -55 150 -55 200 -20 C 220 25 180 65 140 68 C 50 68 -50 68 -140 68 C -180 65 -220 25 -200 -20 Z"
+      fill="url(#bannerVelvet)"
+      stroke="url(#goldRim)"
+      stroke-width="5"
+    />
+    <path
+      d="M -192 -16 C -145 -48 145 -48 192 -16"
+      fill="none"
+      stroke="url(#goldBevel)"
+      stroke-width="2"
+      stroke-dasharray="4 2"
+    />
+
+    <!-- Glowing Heart Flourish above 'i' -->
+    <path
+      d="M -8 -45 C -14 -54 -24 -46 -18 -38 L -8 -28 L 2 -38 C 8 -46 -2 -54 -8 -45 Z"
+      fill="#F43F5E"
+      stroke="url(#goldRim)"
+      stroke-width="1.5"
+    />
+
+    <!-- "Dhivesri" in Golden Calligraphy Script -->
+    <text
+      x="0"
+      y="18"
+      text-anchor="middle"
+      font-family="'Playfair Display', 'Brush Script MT', 'Great Vibes', 'Cinzel', Georgia, serif"
+      font-size="62"
+      font-weight="bold"
+      letter-spacing="1"
+      fill="url(#goldRim)"
+      stroke="#5A051D"
+      stroke-width="2"
+      style="filter: drop-shadow(0 3px 2px rgba(0,0,0,0.6));"
+    >
+      Dhivesri
+    </text>
+
+    <!-- "BEAUTY PARLOUR" in Gold Roman Caps -->
+    <text
+      x="0"
+      y="52"
+      text-anchor="middle"
+      font-family="'Cinzel', 'Playfair Display', Georgia, serif"
+      font-size="20"
+      font-weight="bold"
+      letter-spacing="5"
+      fill="url(#goldRim)"
+      style="filter: drop-shadow(0 2px 2px rgba(0,0,0,0.6));"
+    >
+      BEAUTY PARLOUR
+    </text>
+
+    <!-- Golden Leaf Flourishes at sides of Beauty Parlour -->
+    <path d="M -145 47 Q -160 40 -170 47 Q -160 54 -145 47 Z" fill="url(#goldRim)" />
+    <path d="M 145 47 Q 160 40 170 47 Q 160 54 145 47 Z" fill="url(#goldRim)" />
+  </g>
+
+  <!-- Lower Pill 1: HOME SERVICE 🏠 - SALEM - -->
+  <g transform="translate(250, 400)">
+    <!-- Rounded Pill Frame -->
+    <rect
+      x="-135"
+      y="-18"
+      width="270"
+      height="36"
+      rx="18"
+      fill="url(#burgundyPill)"
+      stroke="url(#goldRim)"
+      stroke-width="3"
+    />
+    
+    <!-- Home Icon 🏠 -->
+    <g transform="translate(75, -8)">
+      <path d="M 0 5 L 8 -3 L 16 5 L 16 16 L 0 16 Z" fill="url(#goldRim)" />
+      <rect x="5" y="9" width="6" height="7" fill="#4A051B" />
+      <path d="M -2 6 L 8 -4 L 18 6" stroke="url(#goldBevel)" stroke-width="2" fill="none" />
+    </g>
+
+    <!-- Text: HOME SERVICE -->
+    <text
+      x="-15"
+      y="4"
+      text-anchor="middle"
+      font-family="'Cinzel', 'Plus Jakarta Sans', sans-serif"
+      font-size="16"
+      font-weight="bold"
+      letter-spacing="2"
+      fill="url(#goldRim)"
+    >
+      HOME SERVICE
+    </text>
+
+    <!-- Subtitle: - SALEM - -->
+    <text
+      x="0"
+      y="28"
+      text-anchor="middle"
+      font-family="'Plus Jakarta Sans', sans-serif"
+      font-size="11"
+      font-weight="bold"
+      letter-spacing="3"
+      fill="#881337"
+    >
+      — SALEM —
+    </text>
+  </g>
+
+  <!-- Lower Pill 2: LADIES ONLY with Female Silhouette Cameo -->
+  <g transform="translate(250, 452)">
+    <!-- Gold Capsule -->
+    <rect
+      x="-85"
+      y="-14"
+      width="170"
+      height="28"
+      rx="14"
+      fill="url(#innerCreamGlow)"
+      stroke="url(#goldRim)"
+      stroke-width="2.5"
+    />
+
+    <!-- Magenta Cameo Circle with Lady Silhouette -->
+    <circle cx="-62" cy="0" r="10" fill="#9F1239" />
+    <path
+      d="M -62 -6 C -59 -6 -57 -4 -57 -1 C -57 2 -59 4 -61 5 C -63 4 -65 2 -65 -1 C -65 -4 -63 -6 -62 -6 Z"
+      fill="#FFF1F2"
+    />
+    <path d="M -67 7 C -66 4 -63 3 -61 5 C -59 3 -56 4 -55 7 Z" fill="#FFF1F2" />
+
+    <!-- Text: LADIES ONLY -->
+    <text
+      x="8"
+      y="4.5"
+      text-anchor="middle"
+      font-family="'Cinzel', 'Plus Jakarta Sans', sans-serif"
+      font-size="12"
+      font-weight="900"
+      letter-spacing="2"
+      fill="#6B0A26"
+    >
+      LADIES ONLY
+    </text>
+  </g>
+
+  <!-- Sparkle Accents on Crest -->
+  <path d="M 65 260 L 68 270 L 78 273 L 68 276 L 65 286 L 62 276 L 52 273 L 62 270 Z" fill="#FFF8D6" />
+  <path d="M 430 250 L 432 258 L 440 260 L 432 262 L 430 270 L 428 262 L 420 260 L 428 258 Z" fill="#FFF8D6" />
+</svg>

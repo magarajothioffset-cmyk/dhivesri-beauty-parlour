@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pediBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF9" />
+      <stop offset="50%" stop-color="#F8EFEA" />
+      <stop offset="100%" stop-color="#EDE0D8" />
+    </linearGradient>
+    <linearGradient id="basinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F2EAE5" />
+      <stop offset="100%" stop-color="#DCD0C9" />
+    </linearGradient>
+    <linearGradient id="spaWater" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2FE" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#BAE6FD" />
+    </linearGradient>
+    <filter id="shadowP" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#553F36" flood-opacity="0.14" />
+    </filter>
+  </defs>
+
+  <!-- Background Wall -->
+  <rect width="800" height="420" fill="url(#pediBg)" />
+
+  <!-- Soft Ambient Glow -->
+  <circle cx="400" cy="200" r="270" fill="#FFF8F4" opacity="0.8" />
+
+  <!-- Floor Surface -->
+  <rect y="420" width="800" height="180" fill="#DDD0C8" />
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#C2B2AA" stroke-width="2" />
+
+  <!-- Plush Spa Bath Mat in Center -->
+  <ellipse cx="400" cy="460" rx="310" ry="70" fill="#FAF6F4" stroke="#E6DDD7" stroke-width="2" />
+
+  <!-- Foot Soak Basin (Center) -->
+  <g filter="url(#shadowP)">
+    <!-- Basin Outer Rim -->
+    <ellipse cx="400" cy="400" rx="190" ry="60" fill="url(#basinGrad)" stroke="#DFD4CD" stroke-width="3" />
+    <!-- Basin Water Fill -->
+    <ellipse cx="400" cy="400" rx="170" ry="50" fill="url(#spaWater)" />
+    <!-- Water Ripple Ring -->
+    <ellipse cx="400" cy="400" rx="130" ry="36" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6" />
+
+    <!-- Floating Pink & Red Rose Petals in Foot Soak Basin -->
+    <ellipse cx="320" cy="390" rx="18" ry="12" transform="rotate(-15 320 390)" fill="#B53A5A" opacity="0.9" />
+    <ellipse cx="380" cy="415" rx="16" ry="11" transform="rotate(25 380 415)" fill="#9F2B48" opacity="0.95" />
+    <ellipse cx="450" cy="385" rx="19" ry="13" transform="rotate(10 450 385)" fill="#C74668" opacity="0.9" />
+    <ellipse cx="480" cy="410" rx="15" ry="10" transform="rotate(-30 480 410)" fill="#B53A5A" opacity="0.9" />
+    <ellipse cx="350" cy="418" rx="14" ry="10" transform="rotate(5 350 418)" fill="#C74668" opacity="0.9" />
+    <ellipse cx="410" cy="390" rx="16" ry="12" transform="rotate(-10 410 390)" fill="#9F2B48" opacity="0.95" />
+
+    <!-- Fresh Jasmine Florets -->
+    <circle cx="360" cy="392" r="7" fill="#FFFFFF" />
+    <circle cx="366" cy="388" r="6" fill="#FFFFFF" />
+    <circle cx="363" cy="392" r="3" fill="#FACC15" />
+    <circle cx="435" cy="412" r="7" fill="#FFFFFF" />
+    <circle cx="441" cy="408" r="6" fill="#FFFFFF" />
+    <circle cx="438" cy="412" r="3" fill="#FACC15" />
+  </g>
+
+  <!-- Volcanic Foot Pumice Stone (Left on Mat) -->
+  <g filter="url(#shadowP)">
+    <ellipse cx="160" cy="450" rx="42" ry="24" fill="#A89F91" stroke="#90877A" stroke-width="1.5" />
+    <!-- Porous texture dots -->
+    <circle cx="145" cy="445" r="2.5" fill="#756E63" />
+    <circle cx="160" cy="442" r="3" fill="#756E63" />
+    <circle cx="172" cy="448" r="2" fill="#756E63" />
+    <circle cx="152" cy="454" r="3.5" fill="#756E63" />
+    <circle cx="168" cy="456" r="2.5" fill="#756E63" />
+  </g>
+
+  <!-- Manicure & Nail Care Tools on Linen Cloth (Right on Mat) -->
+  <g filter="url(#shadowP)">
+    <rect x="580" y="420" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#E6DDD7" stroke-width="2" />
+    <!-- 4-Way Nail Buffer Block (Pastel Pink) -->
+    <rect x="595" y="430" width="100" height="20" rx="4" fill="#F8B4C0" stroke="#E292A1" stroke-width="1.5" />
+    <text x="645" y="444" fill="#9F2B48" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">NAIL CARE</text>
+
+    <!-- Cuticle Pusher (Stainless Steel) -->
+    <rect x="595" y="462" width="100" height="6" rx="3" fill="#CFD6DC" stroke="#9EAAAE" stroke-width="1" />
+    <path d="M 695 460 L 705 465 L 695 470 Z" fill="#CFD6DC" />
+  </g>
+
+  <!-- Clean Rolled Cotton Salon Towel (Top Right) -->
+  <g filter="url(#shadowP)">
+    <ellipse cx="640" cy="330" rx="26" ry="38" fill="#FAF6F4" stroke="#E6DCD6" stroke-width="2" />
+    <ellipse cx="640" cy="330" rx="13" ry="18" fill="#E6DCD6" />
+    <path d="M 640 292 L 720 300 L 720 365 L 640 365 Z" fill="#FFFFFF" stroke="#E6DCD6" stroke-width="1.5" />
+    <!-- Burgundy Ribbon -->
+    <path d="M 680 297 L 692 298 L 692 365 L 680 365 Z" fill="#9F2B48" />
+  </g>
+
+  <!-- Bottom Title Tag Banner -->
+  <rect x="230" y="525" width="340" height="36" rx="18" fill="#9F2B48" opacity="0.95" />
+  <text x="400" y="548" fill="#FFFFFF" font-family="'Playfair Display', serif, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" letter-spacing="1">
+    PEDICURE &amp; MANICURE SETUP
+  </text>
+</svg>

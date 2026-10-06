@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="eyebrowBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9" />
+      <stop offset="50%" stop-color="#FBF2EB" />
+      <stop offset="100%" stop-color="#F4E2D5" />
+    </linearGradient>
+    <linearGradient id="roseTray" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F3E5E0" />
+    </linearGradient>
+    <linearGradient id="steelG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#CFD6DC" />
+      <stop offset="100%" stop-color="#9BA6B0" />
+    </linearGradient>
+    <linearGradient id="roseGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8D3CE" />
+      <stop offset="50%" stop-color="#E29D96" />
+      <stop offset="100%" stop-color="#BA6A63" />
+    </linearGradient>
+    <filter id="shadowE" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#60423A" flood-opacity="0.14" />
+    </filter>
+  </defs>
+
+  <!-- Background Wall -->
+  <rect width="800" height="420" fill="url(#eyebrowBg)" />
+
+  <!-- Soft Ambient Glow -->
+  <circle cx="400" cy="200" r="270" fill="#FFF8F4" opacity="0.8" />
+
+  <!-- Countertop -->
+  <rect y="420" width="800" height="180" fill="#E6DCD6" />
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#CABFB9" stroke-width="2" />
+
+  <!-- Elegant Ceramic Tray in Center -->
+  <g filter="url(#shadowE)">
+    <rect x="140" y="270" width="520" height="185" rx="26" fill="url(#roseTray)" stroke="#EAE0DC" stroke-width="3" />
+    <!-- Tray rim shadow -->
+    <rect x="148" y="278" width="504" height="169" rx="20" fill="none" stroke="#FAF4F0" stroke-width="3" />
+  </g>
+
+  <!-- Organic Threading Spool (Left on Tray) -->
+  <g filter="url(#shadowE)">
+    <rect x="200" y="315" width="85" height="95" rx="8" fill="#FFFFFF" stroke="#E2D4CD" stroke-width="2" />
+    <!-- Thread winding lines -->
+    <line x1="200" y1="330" x2="285" y2="330" stroke="#9F2B48" stroke-width="2" />
+    <line x1="200" y1="340" x2="285" y2="340" stroke="#9F2B48" stroke-width="2.5" />
+    <line x1="200" y1="350" x2="285" y2="350" stroke="#9F2B48" stroke-width="2.5" />
+    <line x1="200" y1="360" x2="285" y2="360" stroke="#9F2B48" stroke-width="2.5" />
+    <line x1="200" y1="370" x2="285" y2="370" stroke="#9F2B48" stroke-width="2.5" />
+    <line x1="200" y1="380" x2="285" y2="380" stroke="#9F2B48" stroke-width="2.5" />
+    <line x1="200" y1="390" x2="285" y2="390" stroke="#9F2B48" stroke-width="2" />
+    <!-- Spool Rim -->
+    <ellipse cx="242" cy="315" rx="42" ry="12" fill="#E8DED8" />
+    <ellipse cx="242" cy="315" rx="14" ry="6" fill="#887870" />
+    <!-- Cotton Thread Lead -->
+    <path d="M 285 365 Q 330 350 360 380 Q 380 400 420 370" stroke="#9F2B48" stroke-width="3" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Precision Slanted Tweezers (Center) -->
+  <g filter="url(#shadowE)">
+    <path d="M 330 340 L 460 320 L 465 324 L 332 355 Z" fill="url(#roseGold)" stroke="#A05550" stroke-width="1" />
+    <path d="M 330 340 L 460 330 L 465 334 L 332 355 Z" fill="url(#roseGold)" stroke="#A05550" stroke-width="1" />
+    <!-- Grip Ribs -->
+    <line x1="390" y1="332" x2="390" y2="345" stroke="#FFFFFF" stroke-width="1.5" />
+    <line x1="396" y1="331" x2="396" y2="344" stroke="#FFFFFF" stroke-width="1.5" />
+    <line x1="402" y1="330" x2="402" y2="343" stroke="#FFFFFF" stroke-width="1.5" />
+  </g>
+
+  <!-- Spoolie Eyebrow Grooming Brush (Right) -->
+  <g filter="url(#shadowE)">
+    <!-- Handle -->
+    <rect x="420" y="390" width="180" height="9" rx="4.5" transform="rotate(-18 420 390)" fill="#231F20" />
+    <!-- Ferrule (Gold) -->
+    <rect x="580" y="336" width="30" height="9" rx="2" transform="rotate(-18 580 336)" fill="url(#roseGold)" />
+    <!-- Spiral Brush Head -->
+    <path d="M 610 326 Q 645 315 650 313" stroke="#9F2B48" stroke-width="14" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Soothing Aloe / Rose Gel Jar (Right Foreground) -->
+  <g filter="url(#shadowE)">
+    <circle cx="580" cy="380" r="32" fill="#FFFFFF" stroke="#E6D8D2" stroke-width="2" />
+    <circle cx="580" cy="380" r="24" fill="#C5E3D5" opacity="0.8" />
+    <circle cx="580" cy="380" r="14" fill="#A8D5C0" />
+  </g>
+
+  <!-- Jasmine Floral Blossoms on Tray -->
+  <g>
+    <!-- Flower 1 -->
+    <circle cx="340" cy="415" r="9" fill="#FFFFFF" />
+    <circle cx="352" cy="412" r="8" fill="#FFFFFF" />
+    <circle cx="342" cy="425" r="8" fill="#FFFFFF" />
+    <circle cx="345" cy="418" r="4.5" fill="#F4CF68" />
+    <!-- Flower 2 -->
+    <circle cx="510" cy="410" r="9" fill="#FFFFFF" />
+    <circle cx="522" cy="407" r="8" fill="#FFFFFF" />
+    <circle cx="515" cy="418" r="8" fill="#FFFFFF" />
+    <circle cx="515" cy="412" r="4.5" fill="#F4CF68" />
+  </g>
+
+  <!-- Bottom Title Tag Banner -->
+  <rect x="230" y="525" width="340" height="36" rx="18" fill="#9F2B48" opacity="0.95" />
+  <text x="400" y="548" fill="#FFFFFF" font-family="'Playfair Display', serif, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" letter-spacing="1">
+    EYEBROW THREADING &amp; SHAPING
+  </text>
+</svg>
