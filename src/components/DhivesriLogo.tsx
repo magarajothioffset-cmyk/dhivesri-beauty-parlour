@@ -80,7 +80,7 @@ export const DhivesriLogo: React.FC<DhivesriLogoProps> = ({
                 lightText ? 'text-amber-300' : 'text-rose-900'
               }`}
             >
-              Beauty Parlour
+              Home Service
             </span>
           </div>
 
