@@ -127,6 +127,24 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+      {/* Social Media Links */}
+      <div className="mt-6 border-t border-stone-700 pt-5 text-center">
+        <h3 className="text-sm font-bold text-amber-200">
+          Follow Dhivesri Beauty Parlour
+        </h3>
+        <div className="mt-3 flex flex-wrap justify-center gap-5 text-sm">
+          <a href="https://www.youtube.com/channel/UCXHXUPciSWn3c4199M95JVA" target="_blank" rel="noopener noreferrer" className="text-stone-300 hover:text-red-400">
+            YouTube
+          </a>
+          <a href="https://instagram.com/beauticion_home_service?rpxt=cGlkeTd3cHhydWV6" target="_blank" rel="noopener noreferrer" className="text-stone-300 hover:text-pink-400">
+            Instagram
+          </a>
+          <a href="https://www.facebook.com/share/1C4fEtWqzT/" target="_blank" rel="noopener noreferrer" className="text-stone-300 hover:text-blue-400">
+            Facebook
+          </a>
+        </div>
+      </div>
+
       </div>
     </footer>
   );
